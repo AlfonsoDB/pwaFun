@@ -1,5 +1,5 @@
 function doRegisterPWAApp(){
-	if ('serviceWorker' in navigator) {
+	/*if ('serviceWorker' in navigator) {
 	  window.addEventListener('load', function() {
 	    navigator.serviceWorker.register('/sw.js').then(
 	    	function(registration) {
@@ -10,6 +10,17 @@ function doRegisterPWAApp(){
 		      console.log('ServiceWorker registration failed: ', err);
 		    });
 	  });
+	}*/
+
+	if ('serviceWorker' in navigator) {
+	  navigator.serviceWorker.register('service-worker.js');
 	}
+
+	document.querySelector('#show').addEventListener('click', () => {
+	  const iconUrl = document.querySelector('select').selectedOptions[0].value;
+	  let imgElement = document.createElement('img');
+	  imgElement.src = iconUrl;
+	  document.querySelector('#container').appendChild(imgElement);
+	});
 
 }
