@@ -1,10 +1,4 @@
+function doRegisterPWAApp(){
+	alert("let's go 2");
 
-(function(){
-
-	function doRegisterPWAApp(){
-		alert("let's go 2");
-	}
-
-
-});
-
+}
